@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/theme.dart';
+import 'package:food_delivery/widget/order_card.dart';
 import 'package:food_delivery/widget/time_loc_info.dart';
 
 class HomePage extends StatelessWidget {
@@ -211,10 +212,60 @@ class HomePage extends StatelessWidget {
                         ),
                         Container(
                           width: double.infinity,
-                          height: 200,
                           decoration: BoxDecoration(
                             color: whiteColor,
                             borderRadius: BorderRadius.circular(30),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(
+                              defaultMargin,
+                              20,
+                              defaultMargin,
+                              20,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Order Information',
+                                  style: titleTextstyle.copyWith(
+                                    fontSize: 14,
+                                    color: blackColor,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                OrderCard(
+                                  imageUrl: 'assets/menu1.png',
+                                  menuTitle: 'Pizza Pro Max',
+                                  menuId: 'ID : 2eZ4Me',
+                                  price: 'Rp. 120.000',
+                                  sizeType: '(Medium)',
+                                  qty: 2,
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Divider(),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                OrderCard(
+                                  imageUrl: 'assets/menu2.png',
+                                  menuTitle: 'Coca Cola Max',
+                                  menuId: 'ID : 2eZ4Me',
+                                  price: 'Rp. 60.000',
+                                  sizeType: '(Cold)',
+                                  qty: 6,
+                                ),
+                                SizedBox(
+                                  height: 15,
+                                ),
+                                Divider(),
+                              ],
+                            ),
                           ),
                         ),
                         SizedBox(
