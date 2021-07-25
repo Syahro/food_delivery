@@ -278,7 +278,120 @@ class HomePage extends StatelessWidget {
                             color: whiteColor,
                             borderRadius: BorderRadius.circular(30),
                           ),
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(
+                              defaultMargin,
+                              20,
+                              defaultMargin,
+                              0,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Payment Summary',
+                                  style: titleTextstyle.copyWith(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w700,
+                                    color: blackColor,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Price',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: blackColor.withOpacity(0.8),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Rp. 180.000',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: semiYellowColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'exes',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: blackColor.withOpacity(0.8),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Rp. 20.000',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: semiYellowColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Divider(),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Total Payment',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        color: blackColor.withOpacity(0.8),
+                                      ),
+                                    ),
+                                    Text(
+                                      'Rp. 200.000',
+                                      style: subTitleTextStyle.copyWith(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w400,
+                                        color: semiYellowColor,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                         ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          width: double.infinity,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: whiteColor,
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(30),
+                            ),
+                          ),
+                        )
                       ],
                     ),
                   ),
