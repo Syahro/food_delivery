@@ -15,6 +15,32 @@ class HomePage extends StatelessWidget {
             height: 405,
             fit: BoxFit.cover,
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(
+              20,
+              50,
+              35,
+              25,
+            ),
+            child: Row(
+              children: [
+                Container(
+                  height: 35,
+                  width: 35,
+                  decoration: BoxDecoration(
+                    color: semiBlackColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: Icon(
+                      Icons.chevron_left,
+                      color: whiteColor,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
           ListView(
             children: [
               SizedBox(
@@ -273,7 +299,7 @@ class HomePage extends StatelessWidget {
                         ),
                         Container(
                           width: double.infinity,
-                          height: 200,
+                          height: 170,
                           decoration: BoxDecoration(
                             color: whiteColor,
                             borderRadius: BorderRadius.circular(30),
@@ -384,11 +410,149 @@ class HomePage extends StatelessWidget {
                         ),
                         Container(
                           width: double.infinity,
-                          height: 100,
                           decoration: BoxDecoration(
                             color: whiteColor,
                             borderRadius: BorderRadius.vertical(
                               top: Radius.circular(30),
+                            ),
+                          ),
+                          child: Padding(
+                            padding: EdgeInsets.fromLTRB(
+                              15,
+                              10,
+                              15,
+                              20,
+                            ),
+                            child: Column(
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      padding: EdgeInsets.only(right: 10),
+                                      height: 20,
+                                      width: 88,
+                                      decoration: BoxDecoration(
+                                        color: lightGreyColor.withOpacity(0.3),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Container(
+                                            width: 40,
+                                            height: 20,
+                                            decoration: BoxDecoration(
+                                                color: semiYellowColor,
+                                                borderRadius:
+                                                    BorderRadius.circular(10),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: whiteColor,
+                                                    blurRadius: 0,
+                                                    spreadRadius: 0,
+                                                    offset: Offset(2, 0),
+                                                  )
+                                                ]),
+                                            child: Center(
+                                              child: Text(
+                                                'VISA',
+                                                style:
+                                                    subTitleTextStyle.copyWith(
+                                                  fontSize: 9.5,
+                                                  color: whiteColor,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Text(
+                                            '200.00',
+                                            style: subTitleTextStyle.copyWith(
+                                              fontSize: 9.5,
+                                              color: blackColor,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                    Container(
+                                      height: 20,
+                                      width: 20,
+                                      decoration: BoxDecoration(
+                                        color: semiBlackColor.withOpacity(0.6),
+                                        borderRadius: BorderRadius.circular(10),
+                                      ),
+                                      child: Center(
+                                        child: Icon(
+                                          Icons.more_vert,
+                                          color: whiteColor,
+                                          size: 15,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Container(
+                                  height: 55,
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: semiYellowColor,
+                                  ),
+                                  child: Padding(
+                                    padding: EdgeInsets.symmetric(
+                                      horizontal: 15,
+                                    ),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 35,
+                                          width: 35,
+                                          decoration: BoxDecoration(
+                                            color: semiBlackColor,
+                                            borderRadius:
+                                                BorderRadius.circular(20),
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.arrow_forward,
+                                              color: whiteColor,
+                                              size: 20,
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Text(
+                                          'CANCEL',
+                                          style: titleTextstyle.copyWith(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
+                                            color: blackColor,
+                                          ),
+                                        ),
+                                        Spacer(),
+                                        Text(
+                                          '200.000',
+                                          style: titleTextstyle.copyWith(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w600,
+                                            color: blackColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         )
@@ -398,7 +562,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ],
-          )
+          ),
         ],
       ),
     );
